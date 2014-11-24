@@ -1,0 +1,22 @@
+<?php
+//Error reporting
+error_reporting(E_ALL ^ E_NOTICE);
+ini_set('display_errors',1);
+
+//Start session
+session_start();
+
+//Set Timezone
+date_default_timezone_set('Europe/Belgrade');
+
+//MySQL Connection Settings
+$SQLServer	= "localhost";
+$SQLUser	= "";
+$SQLPass	= "";
+
+//MySQL Database Settings
+$DBName		= "anoncast";
+
+$con = mysql_connect($SQLServer,$SQLUser,$SQLPass);
+mysql_select_db($DBName, $con);
+?>
